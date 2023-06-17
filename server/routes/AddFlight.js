@@ -31,9 +31,11 @@ router.get("/flight-list", async (req, res) => {
 router.delete("/delete-flight/:id",async(req,res)=>{
     console.log(req.params.id);
     const flight =await Flight.findById(req.params.id);
+    console.log(flight)
     if(flight){
       await flight.deleteOne();
-               res.status(200).json("the flight has been deleted")
+               res.status(200).json("success")
+               
     }
     else{
       res.status(403).json("flight does not exist")

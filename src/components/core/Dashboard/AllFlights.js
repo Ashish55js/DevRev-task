@@ -21,10 +21,10 @@ function AllFlights() {
       console.log("data"+data);
   return (
     <div>
-        <div className='bg-blue-500 text-white'>List Of Flight</div>
+        <div className='text-2xl font-bold	bg-blue-500 text-white'><h1>List Of Flights </h1></div>
         { data.map((dataObj, index) => {
           return(
-            <FlightItem flightname={dataObj.flightName} from={dataObj.from} to={dataObj.to} id={dataObj._id} />
+                <FlightItem flightname={dataObj.flightName} from={dataObj.from} to={dataObj.to} key={index} id={dataObj._id} />            
           );
         })}
       

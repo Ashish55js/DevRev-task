@@ -22,7 +22,7 @@ export const sidebarLinks = [
   },
   {
     id: 4,
-    name: "All-Flights",
+    name: "All-Flights_List",
     path: "/dashboard/all-flights",
     type: ACCOUNT_TYPE.ADMIN,
     icon: "VscAdd",

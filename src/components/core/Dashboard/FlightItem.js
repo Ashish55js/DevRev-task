@@ -7,9 +7,10 @@ function FlightItem(props) {
     const navigate = useNavigate();
 
     const id=props.id;
+    console.log("id="+id);
     const handleClick = async (e) => {
         e.preventDefault();
-        axios.delete("http://localhost:4000/api/v1/add-flite/delete-flight/"+id)
+        axios.delete("http://localhost:4000/api/v1/add-flight/delete-flight/"+id)
         .then(result=>{
             console.log(result.data);
             if(result.data==="success"){
